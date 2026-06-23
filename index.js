@@ -4,6 +4,12 @@ const express = require('express');
 
 const app = express()
 
+const githubdata={
+     "name":"tushar",
+      age:20
+
+}
+
 const port = 4000
 
 app.get('/', (req, res) => {
@@ -16,6 +22,10 @@ app.get('/twitter', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.send('<h1>please login</h1>')
+})
+
+app.get('/github', (req, res) => {
+  res.json(githubdata)
 })
 
 app.get('/youtube',(req,res)=>{
